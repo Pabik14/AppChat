@@ -12,6 +12,10 @@
       <module>common/exception</module>
 
       <module>auth-service</module>
+      <module>chat-service</module>
+      <module>account-service</module>
+      <module>gateway</module>
+
     </modules>
     <properties>
         <maven.compiler.source>20</maven.compiler.source>
