@@ -40,6 +40,7 @@ public class ChatController {
     }
 
     @PostMapping(value = "/{receiverId}", consumes = APPLICATION_JSON)
+//    @PostMapping(value = "/{receiverId}", consumes = APPLICATION_JSON)
     public void sendMessage(@Valid @RequestBody SendMessageRequest sendMessageRequest, @AuthenticationPrincipal Integer authorId, @PathVariable Integer receiverId) {
         var message = mapper.toMessage(sendMessageRequest, authorId, receiverId);
         service.sendMessage(message);

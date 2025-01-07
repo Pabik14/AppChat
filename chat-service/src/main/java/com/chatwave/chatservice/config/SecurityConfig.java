@@ -46,3 +46,78 @@ public class SecurityConfig {
         return http.build();
     }
 }
+public class SecurityConfig2 {
+    private final List<String> activeProfiles;
+    private final UserAuthFilter userAuthFilter;
+
+    @Bean
+    public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests(auth ->
+                    auth.requestMatchers(GET, "/actuator/health").permitAll()
+                        .requestMatchers("/error").permitAll()
+                        .anyRequest().authenticated()
+            )
+            .oauth2ResourceServer(resourceServer ->
+                    resourceServer.jwt(withDefaults())
+            )
+            .sessionManagement((session) ->
+                    session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            )
+            .addFilterAt(userAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        if(activeProfiles.contains("csrf_disable"))
+            http.csrf(AbstractHttpConfigurer::disable);
+
+        return http.build();
+    }
+}
+public class SecurityConfig3{
+    private final List<String> activeProfiles;
+    private final UserAuthFilter userAuthFilter;
+
+    @Bean
+    public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests(auth ->
+                    auth.requestMatchers(GET, "/actuator/health").permitAll()
+                        .requestMatchers("/error").permitAll()
+                        .anyRequest().authenticated()
+            )
+            .oauth2ResourceServer(resourceServer ->
+                    resourceServer.jwt(withDefaults())
+            )
+            .sessionManagement((session) ->
+                    session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            )
+            .addFilterAt(userAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        if(activeProfiles.contains("csrf_disable"))
+            http.csrf(AbstractHttpConfigurer::disable);
+
+        return http.build();
+    }
+}
+public class SecurityConfig4 {
+    private final List<String> activeProfiles;
+    private final UserAuthFilter userAuthFilter;
+
+    @Bean
+    public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests(auth ->
+                    auth.requestMatchers(GET, "/actuator/health").permitAll()
+                        .requestMatchers("/error").permitAll()
+                        .anyRequest().authenticated()
+            )
+            .oauth2ResourceServer(resourceServer ->
+                    resourceServer.jwt(withDefaults())
+            )
+            .sessionManagement((session) ->
+                    session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            )
+            .addFilterAt(userAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        if(activeProfiles.contains("csrf_disable"))
+            http.csrf(AbstractHttpConfigurer::disable);
+
+        return http.build();
+    }
+}
