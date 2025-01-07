@@ -49,12 +49,6 @@ public class ChatControllerTest {
         mockAccountService.start();
     }
 
-    @DynamicPropertySource
-    public static void overrideWebClientBaseUrl(DynamicPropertyRegistry registry) {
-        registry.add("auth-service.url", mockAuthService::baseUrl);
-        registry.add("account-service.url", mockAccountService::baseUrl);
-    }
-
     @AfterAll
     public static void stopWireMock() {
         mockAuthService.stop();
@@ -75,6 +69,35 @@ public class ChatControllerTest {
                                         .withBody(toJson(userAuthentication)))
         );
     }
+
+
+
+    @DynamicPropertySource
+    public static void overrideWebClientBaseUrl(DynamicPropertyRegistry registry) {
+        registry.add("auth-service.url", mockAuthService::baseUrl);
+        registry.add("account-service.url", mockAccountService::baseUrl);
+    }
+
+    // @AfterAll
+    // public static void stopWireMock() {
+    //     mockAuthService.stop();
+    // }
+
+    // @BeforeEach
+    // public void setUp() {
+    //     var userAuthentication = new UserAuthentication();
+    //     userAuthentication.setUserId(USER_ID);
+    //     userAuthentication.setDetails(new UserAuthenticationDetails());
+
+    //     mockAuthService.stubFor(
+    //             get("/sessions/authentication")
+    //                     .withHeader("User-Authorization", equalTo(BEARER_TOKEN))
+    //                     .willReturn(
+    //                             aResponse()
+    //                                     .withHeader("Content-Type", APPLICATION_JSON)
+    //                                     .withBody(toJson(userAuthentication)))
+    //     );
+    // }
 
     @Nested
     @DisplayName("GET /chat/{userId}")
