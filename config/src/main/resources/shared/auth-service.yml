@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://auth-postgres:5432/chatwave
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+app:
+  clients:
+    - id: account-service
+      secret: secret
+      url: http://account-service:8082
+
+    - id: chat-service
+      secret: secret
+      url: http://chat-service:8083
+
+server:
+  port: 8081
