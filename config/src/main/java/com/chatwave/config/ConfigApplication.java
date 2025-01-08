@@ -1,4 +1,4 @@
-package com.chatwave.config;
+package com.AppChat.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.chatwave.registry;
+package com.AppChat.registry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
