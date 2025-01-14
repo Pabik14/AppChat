@@ -1,9 +1,9 @@
-package com.chatapp.chatservice.unit.service;
+package com.appchat.chatservice.unit.service;
 
-import com.chatapp.chatservice.client.AccountClient;
-import com.chatapp.chatservice.domain.Message;
-import com.chatapp.chatservice.repository.ChatRepository;
-import com.chatapp.chatservice.service.ChatServiceImpl;
+import com.appchat.chatservice.client.AccountClient;
+import com.appchat.chatservice.domain.Message;
+import com.appchat.chatservice.repository.ChatRepository;
+import com.appchat.chatservice.service.ChatServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

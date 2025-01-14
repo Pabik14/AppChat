@@ -1,11 +1,11 @@
-package com.chatapp.chatservice.integration.controller;
+package com.appchat.chatservice.integration.controller;
 
-import com.chatapp.authclient.domain.UserAuthentication;
-import com.chatapp.authclient.domain.UserAuthenticationDetails;
-import com.chatapp.chatservice.domain.Message;
-import com.chatapp.chatservice.domain.dto.MessageResponse;
-import com.chatapp.chatservice.domain.dto.SendMessageRequest;
-import com.chatapp.chatservice.repository.ChatRepository;
+import com.appchat.authclient.domain.UserAuthentication;
+import com.appchat.authclient.domain.UserAuthenticationDetails;
+import com.appchat.chatservice.domain.Message;
+import com.appchat.chatservice.domain.dto.MessageResponse;
+import com.appchat.chatservice.domain.dto.SendMessageRequest;
+import com.appchat.chatservice.repository.ChatRepository;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import org.junit.jupiter.api.*;
@@ -18,8 +18,8 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.time.LocalDateTime;
 
-import static com.chatapp.chatservice.utils.JsonUtils.toJson;
-import static com.chatapp.chatservice.utils.TestVariables.*;
+import static com.appchat.chatservice.utils.JsonUtils.toJson;
+import static com.appchat.chatservice.utils.TestVariables.*;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -49,6 +49,12 @@ public class ChatControllerTest {
         mockAccountService.start();
     }
 
+    @DynamicPropertySource
+    public static void overrideWebClientBaseUrl(DynamicPropertyRegistry registry) {
+        registry.add("auth-service.url", mockAuthService::baseUrl);
+        registry.add("account-service.url", mockAccountService::baseUrl);
+    }
+
     @AfterAll
     public static void stopWireMock() {
         mockAuthService.stop();
@@ -69,35 +75,6 @@ public class ChatControllerTest {
                                         .withBody(toJson(userAuthentication)))
         );
     }
-
-
-
-    @DynamicPropertySource
-    public static void overrideWebClientBaseUrl(DynamicPropertyRegistry registry) {
-        registry.add("auth-service.url", mockAuthService::baseUrl);
-        registry.add("account-service.url", mockAccountService::baseUrl);
-    }
-
-    // @AfterAll
-    // public static void stopWireMock() {
-    //     mockAuthService.stop();
-    // }
-
-    // @BeforeEach
-    // public void setUp() {
-    //     var userAuthentication = new UserAuthentication();
-    //     userAuthentication.setUserId(USER_ID);
-    //     userAuthentication.setDetails(new UserAuthenticationDetails());
-
-    //     mockAuthService.stubFor(
-    //             get("/sessions/authentication")
-    //                     .withHeader("User-Authorization", equalTo(BEARER_TOKEN))
-    //                     .willReturn(
-    //                             aResponse()
-    //                                     .withHeader("Content-Type", APPLICATION_JSON)
-    //                                     .withBody(toJson(userAuthentication)))
-    //     );
-    // }
 
     @Nested
     @DisplayName("GET /chat/{userId}")
