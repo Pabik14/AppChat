@@ -1,8 +1,8 @@
-package com.chatapp.chatservice.unit.domain;
+package com.appchat.chatservice.unit.domain;
 
-import com.chatapp.chatservice.domain.Message;
-import com.chatapp.chatservice.domain.MessageMapper;
-import com.chatapp.chatservice.domain.dto.SendMessageRequest;
+import com.appchat.chatservice.domain.Message;
+import com.appchat.chatservice.domain.MessageMapper;
+import com.appchat.chatservice.domain.dto.SendMessageRequest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -1,9 +1,9 @@
-package com.chatapp.chatservice.controller;
+package com.appchat.chatservice.controller;
 
-import com.chatapp.chatservice.domain.MessageMapper;
-import com.chatapp.chatservice.domain.dto.MessageResponse;
-import com.chatapp.chatservice.domain.dto.SendMessageRequest;
-import com.chatapp.chatservice.service.ChatService;
+import com.appchat.chatservice.domain.MessageMapper;
+import com.appchat.chatservice.domain.dto.MessageResponse;
+import com.appchat.chatservice.domain.dto.SendMessageRequest;
+import com.appchat.chatservice.service.ChatService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
@@ -32,15 +32,13 @@ public class ChatController {
             @AuthenticationPrincipal Integer authorId,
             @PathVariable Integer memberId)
     {
-        return service
-                .getMessages(authorId, memberId, since, newer)
-                .parallelStream()
+        return service.getMessages(authorId, memberId, since, newer)
+                .stream()
                 .map(mapper::toMessageResponse)
                 .toList();
     }
 
     @PostMapping(value = "/{receiverId}", consumes = APPLICATION_JSON)
-//    @PostMapping(value = "/{receiverId}", consumes = APPLICATION_JSON)
     public void sendMessage(@Valid @RequestBody SendMessageRequest sendMessageRequest, @AuthenticationPrincipal Integer authorId, @PathVariable Integer receiverId) {
         var message = mapper.toMessage(sendMessageRequest, authorId, receiverId);
         service.sendMessage(message);
