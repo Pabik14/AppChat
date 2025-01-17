@@ -1,6 +1,6 @@
-package com.appchat.accountservice.repository;
+package com.AppChat.accountservice.repository;
 
-import com.appchat.accountservice.domain.Account;
+import com.AppChat.accountservice.domain.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

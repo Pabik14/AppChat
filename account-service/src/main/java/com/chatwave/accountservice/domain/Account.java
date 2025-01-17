@@ -1,4 +1,4 @@
-package com.appchat.accountservice.domain;
+package com.AppChat.accountservice.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.appchat.accountservice.integration;
+package com.AppChat.accountservice.integration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

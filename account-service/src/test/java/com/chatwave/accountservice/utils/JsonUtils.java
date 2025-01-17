@@ -1,4 +1,4 @@
-package com.appchat.accountservice.utils;
+package com.AppChat.accountservice.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

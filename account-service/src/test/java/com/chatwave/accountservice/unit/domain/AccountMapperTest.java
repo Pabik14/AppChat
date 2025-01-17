@@ -1,13 +1,13 @@
-package com.appchat.accountservice.unit.domain;
+package com.AppChat.accountservice.unit.domain;
 
-import com.appchat.accountservice.domain.Account;
-import com.appchat.accountservice.domain.AccountMapper;
-import com.appchat.accountservice.domain.dto.CreateAccountRequest;
+import com.AppChat.accountservice.domain.Account;
+import com.AppChat.accountservice.domain.AccountMapper;
+import com.AppChat.accountservice.domain.dto.CreateAccountRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.appchat.accountservice.utils.TestVariables.*;
+import static com.AppChat.accountservice.utils.TestVariables.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 

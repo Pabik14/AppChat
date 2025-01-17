@@ -1,7 +1,7 @@
-package com.appchat.accountservice.utils;
+package com.AppChat.accountservice.utils;
 
-import com.appchat.accountservice.client.dto.*;
-import com.appchat.accountservice.domain.dto.PatchAccountRequest;
+import com.AppChat.accountservice.client.dto.*;
+import com.AppChat.accountservice.domain.dto.PatchAccountRequest;
 
 public class TestVariables {
     public static final Integer USER_ID = 1;

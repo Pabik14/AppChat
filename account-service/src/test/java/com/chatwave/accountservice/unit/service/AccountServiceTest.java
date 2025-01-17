@@ -1,10 +1,10 @@
-package com.appchat.accountservice.unit.service;
+package com.AppChat.accountservice.unit.service;
 
-import com.appchat.accountservice.client.AuthClient;
-import com.appchat.accountservice.client.dto.RegisterResponse;
-import com.appchat.accountservice.domain.Account;
-import com.appchat.accountservice.repository.AccountRepository;
-import com.appchat.accountservice.service.AccountServiceImpl;
+import com.AppChat.accountservice.client.AuthClient;
+import com.AppChat.accountservice.client.dto.RegisterResponse;
+import com.AppChat.accountservice.domain.Account;
+import com.AppChat.accountservice.repository.AccountRepository;
+import com.AppChat.accountservice.service.AccountServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -17,7 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
 
-import static com.appchat.accountservice.utils.TestVariables.*;
+import static com.AppChat.accountservice.utils.TestVariables.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;

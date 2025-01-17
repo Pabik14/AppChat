@@ -1,6 +1,6 @@
-package com.appchat.accountservice.integration;
+package com.AppChat.accountservice.integration;
 
-import com.appchat.authclient.domain.UserAuthentication;
+import com.AppChat.authclient.domain.UserAuthentication;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import org.junit.jupiter.api.AfterAll;
@@ -14,8 +14,8 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import static com.appchat.accountservice.utils.JsonUtils.toJson;
-import static com.appchat.accountservice.utils.TestVariables.*;
+import static com.AppChat.accountservice.utils.JsonUtils.toJson;
+import static com.AppChat.accountservice.utils.TestVariables.*;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
