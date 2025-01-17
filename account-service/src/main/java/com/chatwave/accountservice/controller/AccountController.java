@@ -1,12 +1,12 @@
-package com.appchat.accountservice.controller;
+package com.AppChat.accountservice.controller;
 
-import com.appchat.accountservice.client.dto.AuthenticationRequest;
-import com.appchat.accountservice.client.dto.TokenSet;
-import com.appchat.accountservice.domain.AccountMapper;
-import com.appchat.accountservice.domain.dto.AccountResponse;
-import com.appchat.accountservice.domain.dto.CreateAccountRequest;
-import com.appchat.accountservice.domain.dto.PatchAccountRequest;
-import com.appchat.accountservice.service.AccountService;
+import com.AppChat.accountservice.client.dto.AuthenticationRequest;
+import com.AppChat.accountservice.client.dto.TokenSet;
+import com.AppChat.accountservice.domain.AccountMapper;
+import com.AppChat.accountservice.domain.dto.AccountResponse;
+import com.AppChat.accountservice.domain.dto.CreateAccountRequest;
+import com.AppChat.accountservice.domain.dto.PatchAccountRequest;
+import com.AppChat.accountservice.service.AccountService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;

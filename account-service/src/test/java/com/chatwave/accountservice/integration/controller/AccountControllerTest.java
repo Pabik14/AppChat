@@ -1,15 +1,15 @@
-package com.appchat.accountservice.integration.controller;
+package com.AppChat.accountservice.integration.controller;
 
-import com.appchat.accountservice.client.dto.AuthenticationResponse;
-import com.appchat.accountservice.client.dto.RegisterResponse;
-import com.appchat.accountservice.client.dto.TokenSet;
-import com.appchat.accountservice.domain.Account;
-import com.appchat.accountservice.domain.dto.AccountResponse;
-import com.appchat.accountservice.domain.dto.CreateAccountRequest;
-import com.appchat.accountservice.domain.dto.PatchAccountRequest;
-import com.appchat.accountservice.repository.AccountRepository;
-import com.appchat.authclient.domain.UserAuthentication;
-import com.appchat.authclient.domain.UserAuthenticationDetails;
+import com.AppChat.accountservice.client.dto.AuthenticationResponse;
+import com.AppChat.accountservice.client.dto.RegisterResponse;
+import com.AppChat.accountservice.client.dto.TokenSet;
+import com.AppChat.accountservice.domain.Account;
+import com.AppChat.accountservice.domain.dto.AccountResponse;
+import com.AppChat.accountservice.domain.dto.CreateAccountRequest;
+import com.AppChat.accountservice.domain.dto.PatchAccountRequest;
+import com.AppChat.accountservice.repository.AccountRepository;
+import com.AppChat.authclient.domain.UserAuthentication;
+import com.AppChat.authclient.domain.UserAuthenticationDetails;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
@@ -21,8 +21,8 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import static com.appchat.accountservice.utils.JsonUtils.toJson;
-import static com.appchat.accountservice.utils.TestVariables.*;
+import static com.AppChat.accountservice.utils.JsonUtils.toJson;
+import static com.AppChat.accountservice.utils.TestVariables.*;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,9 +1,9 @@
-package com.appchat.accountservice.service;
+package com.AppChat.accountservice.service;
 
-import com.appchat.accountservice.client.dto.AuthenticationRequest;
-import com.appchat.accountservice.client.dto.TokenSet;
-import com.appchat.accountservice.domain.Account;
-import com.appchat.accountservice.domain.dto.PatchAccountRequest;
+import com.AppChat.accountservice.client.dto.AuthenticationRequest;
+import com.AppChat.accountservice.client.dto.TokenSet;
+import com.AppChat.accountservice.domain.Account;
+import com.AppChat.accountservice.domain.dto.PatchAccountRequest;
 
 public interface AccountService {
     /**

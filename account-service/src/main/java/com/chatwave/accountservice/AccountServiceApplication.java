@@ -1,4 +1,4 @@
-package com.appchat.accountservice;
+package com.AppChat.accountservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-@ComponentScan({"com.appchat.accountservice","com.appchat.exception"})
+@ComponentScan({"com.AppChat.accountservice","com.AppChat.exception"})
 public class AccountServiceApplication {
 
     public static void main(String[] args) {

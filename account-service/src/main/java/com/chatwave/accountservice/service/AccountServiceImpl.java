@@ -1,10 +1,10 @@
-package com.appchat.accountservice.service;
+package com.AppChat.accountservice.service;
 
-import com.appchat.accountservice.client.AuthClient;
-import com.appchat.accountservice.client.dto.*;
-import com.appchat.accountservice.domain.Account;
-import com.appchat.accountservice.domain.dto.PatchAccountRequest;
-import com.appchat.accountservice.repository.AccountRepository;
+import com.AppChat.accountservice.client.AuthClient;
+import com.AppChat.accountservice.client.dto.*;
+import com.AppChat.accountservice.domain.Account;
+import com.AppChat.accountservice.domain.dto.PatchAccountRequest;
+import com.AppChat.accountservice.repository.AccountRepository;
 import feign.FeignException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

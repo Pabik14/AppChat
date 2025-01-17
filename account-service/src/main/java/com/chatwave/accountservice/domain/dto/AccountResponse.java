@@ -1,4 +1,4 @@
-package com.appchat.accountservice.domain.dto;
+package com.AppChat.accountservice.domain.dto;
 
 public record AccountResponse(
         Integer id,

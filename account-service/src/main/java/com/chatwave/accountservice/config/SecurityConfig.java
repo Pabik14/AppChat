@@ -1,6 +1,6 @@
-package com.appchat.accountservice.config;
+package com.AppChat.accountservice.config;
 
-import com.appchat.authclient.filter.UserAuthFilter;
+import com.AppChat.authclient.filter.UserAuthFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
