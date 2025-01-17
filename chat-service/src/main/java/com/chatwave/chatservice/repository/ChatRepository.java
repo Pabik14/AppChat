@@ -1,6 +1,6 @@
-package com.appchat.chatservice.repository;
+package com.AppChat.chatservice.repository;
 
-import com.appchat.chatservice.domain.Message;
+import com.AppChat.chatservice.domain.Message;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

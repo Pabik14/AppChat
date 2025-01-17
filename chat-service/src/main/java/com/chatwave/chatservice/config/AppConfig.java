@@ -1,8 +1,8 @@
-package com.appchat.chatservice.config;
+package com.AppChat.chatservice.config;
 
-import com.appchat.authclient.filter.UserAuthFilter;
-import com.appchat.chatservice.client.AuthClient;
-import com.appchat.chatservice.domain.MessageMapper;
+import com.AppChat.authclient.filter.UserAuthFilter;
+import com.AppChat.chatservice.client.AuthClient;
+import com.AppChat.chatservice.domain.MessageMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

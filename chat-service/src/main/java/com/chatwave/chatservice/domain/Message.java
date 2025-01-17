@@ -1,4 +1,4 @@
-package com.appchat.chatservice.domain;
+package com.AppChat.chatservice.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;

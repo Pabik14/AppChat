@@ -1,4 +1,4 @@
-package com.appchat.chatservice;
+package com.AppChat.chatservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableFeignClients
-@ComponentScan({"com.appchat.chatservice", "com.appchat.exception"})
+@ComponentScan({"com.AppChat.chatservice", "com.AppChat.exception"})
 public class ChatServiceApplication {
 
     public static void main(String[] args) {

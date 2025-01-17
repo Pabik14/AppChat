@@ -1,6 +1,6 @@
-package com.appchat.chatservice.integration;
+package com.AppChat.chatservice.integration;
 
-import com.appchat.authclient.filter.UserAuthFilter;
+import com.AppChat.authclient.filter.UserAuthFilter;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;

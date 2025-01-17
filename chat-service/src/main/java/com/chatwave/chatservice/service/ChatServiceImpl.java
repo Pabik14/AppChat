@@ -1,8 +1,8 @@
-package com.appchat.chatservice.service;
+package com.AppChat.chatservice.service;
 
-import com.appchat.chatservice.client.AccountClient;
-import com.appchat.chatservice.domain.Message;
-import com.appchat.chatservice.repository.ChatRepository;
+import com.AppChat.chatservice.client.AccountClient;
+import com.AppChat.chatservice.domain.Message;
+import com.AppChat.chatservice.repository.ChatRepository;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
