@@ -1,6 +1,6 @@
-package com.appchat.accountservice.client;
+package com.AppChat.accountservice.client;
 
-import com.appchat.accountservice.client.dto.*;
+import com.AppChat.accountservice.client.dto.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
 @FeignClient(name = "auth-service", url = "${auth-service.url:}")
-public interface AuthClient extends com.appchat.authclient.client.AuthClient {
+public interface AuthClient extends com.AppChat.authclient.client.AuthClient {
     @PostMapping(value = "/users", consumes = APPLICATION_JSON, produces = APPLICATION_JSON)
     RegisterResponse createUser(RegisterRequest registerRequest);
 
