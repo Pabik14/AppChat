@@ -1,6 +1,6 @@
-package com.appchat.chatservice.service;
+package com.AppChat.chatservice.service;
 
-import com.appchat.chatservice.domain.Message;
+import com.AppChat.chatservice.domain.Message;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.appchat.chatservice.integration.repository;
+package com.chatwave.chatservice.integration.repository;
 
-import com.appchat.chatservice.domain.Message;
-import com.appchat.chatservice.repository.ChatRepository;
+import com.chatwave.chatservice.domain.Message;
+import com.chatwave.chatservice.repository.ChatRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static com.appchat.chatservice.utils.TestVariables.*;
+import static com.chatwave.chatservice.utils.TestVariables.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest

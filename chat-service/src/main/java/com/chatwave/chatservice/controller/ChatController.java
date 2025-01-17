@@ -1,9 +1,9 @@
-package com.appchat.chatservice.controller;
+package com.AppChat.chatservice.controller;
 
-import com.appchat.chatservice.domain.MessageMapper;
-import com.appchat.chatservice.domain.dto.MessageResponse;
-import com.appchat.chatservice.domain.dto.SendMessageRequest;
-import com.appchat.chatservice.service.ChatService;
+import com.AppChat.chatservice.domain.MessageMapper;
+import com.AppChat.chatservice.domain.dto.MessageResponse;
+import com.AppChat.chatservice.domain.dto.SendMessageRequest;
+import com.AppChat.chatservice.service.ChatService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;

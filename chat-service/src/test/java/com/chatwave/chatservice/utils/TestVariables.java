@@ -1,4 +1,4 @@
-package com.appchat.chatservice.utils;
+package com.AppChat.chatservice.utils;
 
 public class TestVariables {
     public static final Integer USER_ID = 1;

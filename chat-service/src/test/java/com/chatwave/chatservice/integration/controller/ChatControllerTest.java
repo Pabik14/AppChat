@@ -1,11 +1,11 @@
-package com.appchat.chatservice.integration.controller;
+package com.AppChat.chatservice.integration.controller;
 
-import com.appchat.authclient.domain.UserAuthentication;
-import com.appchat.authclient.domain.UserAuthenticationDetails;
-import com.appchat.chatservice.domain.Message;
-import com.appchat.chatservice.domain.dto.MessageResponse;
-import com.appchat.chatservice.domain.dto.SendMessageRequest;
-import com.appchat.chatservice.repository.ChatRepository;
+import com.AppChat.authclient.domain.UserAuthentication;
+import com.AppChat.authclient.domain.UserAuthenticationDetails;
+import com.AppChat.chatservice.domain.Message;
+import com.AppChat.chatservice.domain.dto.MessageResponse;
+import com.AppChat.chatservice.domain.dto.SendMessageRequest;
+import com.AppChat.chatservice.repository.ChatRepository;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import org.junit.jupiter.api.*;
@@ -18,8 +18,8 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.time.LocalDateTime;
 
-import static com.appchat.chatservice.utils.JsonUtils.toJson;
-import static com.appchat.chatservice.utils.TestVariables.*;
+import static com.AppChat.chatservice.utils.JsonUtils.toJson;
+import static com.AppChat.chatservice.utils.TestVariables.*;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,7 +1,7 @@
-package com.appchat.chatservice.domain;
+package com.AppChat.chatservice.domain;
 
-import com.appchat.chatservice.domain.dto.MessageResponse;
-import com.appchat.chatservice.domain.dto.SendMessageRequest;
+import com.AppChat.chatservice.domain.dto.MessageResponse;
+import com.AppChat.chatservice.domain.dto.SendMessageRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

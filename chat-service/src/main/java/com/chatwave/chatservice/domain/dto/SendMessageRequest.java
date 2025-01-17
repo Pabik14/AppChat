@@ -1,4 +1,4 @@
-package com.appchat.chatservice.domain.dto;
+package com.AppChat.chatservice.domain.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;
